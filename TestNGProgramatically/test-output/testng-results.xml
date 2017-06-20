@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testng-results skipped="0" failed="0" ignored="0" total="4" passed="4">
+  <reporter-output>
+  </reporter-output>
+  <suite name="Suite" duration-ms="166" started-at="2017-06-15T03:13:37Z" finished-at="2017-06-15T03:13:37Z">
+    <groups>
+    </groups>
+    <test name="Test" duration-ms="166" started-at="2017-06-15T03:13:37Z" finished-at="2017-06-15T03:13:37Z">
+      <class name="com.box.tests.MultipleTestData">
+        <test-method status="PASS" signature="testCase1(java.lang.String, java.lang.String, java.lang.String)[pri:0, instance:com.box.tests.MultipleTestData@174d20a]" name="testCase1" duration-ms="16" started-at="2017-06-15T08:43:37Z" data-provider="data-provider" finished-at="2017-06-15T08:43:37Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[Anil]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[Sharma]]>
+              </value>
+            </param>
+            <param index="2">
+              <value>
+                <![CDATA[anil@xyz.com]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testCase1 -->
+        <test-method status="PASS" signature="testCase1(java.lang.String, java.lang.String, java.lang.String)[pri:0, instance:com.box.tests.MultipleTestData@174d20a]" name="testCase1" duration-ms="5" started-at="2017-06-15T08:43:37Z" data-provider="data-provider" finished-at="2017-06-15T08:43:37Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[Vikas]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[Sood]]>
+              </value>
+            </param>
+            <param index="2">
+              <value>
+                <![CDATA[vikas@xyz.com]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testCase1 -->
+        <test-method status="PASS" signature="testCase1(java.lang.String, java.lang.String, java.lang.String)[pri:0, instance:com.box.tests.MultipleTestData@174d20a]" name="testCase1" duration-ms="7" started-at="2017-06-15T08:43:37Z" data-provider="data-provider" finished-at="2017-06-15T08:43:37Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[Raman]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[Singla]]>
+              </value>
+            </param>
+            <param index="2">
+              <value>
+                <![CDATA[raman@xyz.com]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testCase1 -->
+        <test-method status="PASS" signature="testCase1(java.lang.String, java.lang.String, java.lang.String)[pri:0, instance:com.box.tests.MultipleTestData@174d20a]" name="testCase1" duration-ms="2" started-at="2017-06-15T08:43:37Z" data-provider="data-provider" finished-at="2017-06-15T08:43:37Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[Gurdeep]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[Singh]]>
+              </value>
+            </param>
+            <param index="2">
+              <value>
+                <![CDATA[gurdeep@xyz.com]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testCase1 -->
+      </class> <!-- com.box.tests.MultipleTestData -->
+    </test> <!-- Test -->
+  </suite> <!-- Suite -->
+</testng-results>
