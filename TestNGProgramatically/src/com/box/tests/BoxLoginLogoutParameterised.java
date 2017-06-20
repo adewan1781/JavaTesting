@@ -43,6 +43,7 @@ public class BoxLoginLogoutParameterised {
 			driver.get(appUrl);
 			driver.manage().window().maximize();
 			driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
+			System.out.println("driver created123");
 	   }
 
 
