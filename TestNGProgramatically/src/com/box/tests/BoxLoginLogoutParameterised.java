@@ -32,14 +32,14 @@ public class BoxLoginLogoutParameterised {
 		   bp = new BoxLoginLogoutParameterised();
 			DesiredCapabilities capabilities = new DesiredCapabilities();
 			capabilities.setPlatform(Platform.MAC);
-			capabilities.setBrowserName("firefox");
+			capabilities.setBrowserName("chrome");
 			capabilities.setCapability(ForSeleniumServer.PROXYING_EVERYTHING, true);
 			capabilities.setCapability(CapabilityType.ACCEPT_SSL_CERTS, true);
 			capabilities.setCapability(CapabilityType.SUPPORTS_ALERTS, true);
 			capabilities.setCapability(CapabilityType.SUPPORTS_JAVASCRIPT, true);
 			
 			// objects and variables instantiation
-			driver = new FirefoxDriver(capabilities);
+			driver = new ChromeDriver(capabilities);
 			driver.get(appUrl);
 			driver.manage().window().maximize();
 			driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
@@ -61,7 +61,7 @@ public class BoxLoginLogoutParameterised {
 	}
 	
 	
-	@Test
+	@Test(dependsOnMethods={"verifyTitle1"})
 	public void loginIntoBox(){
 		// enter a valid username in the email textbox
 
@@ -84,7 +84,7 @@ public class BoxLoginLogoutParameterised {
 		signInButton.click();
 	}
 
-	@Test
+	@Test(dependsOnMethods={"loginIntoBox"})
 	 @Parameters({ "expectedTitle2" })
 	public void verifyTitle2(String expectedTitle2) throws InterruptedException{
 		new WebDriverWait(driver, 30).until(ExpectedConditions.titleIs(expectedTitle2));
@@ -95,13 +95,15 @@ public class BoxLoginLogoutParameterised {
 			System.out.println("Verification Failed - An incorrect title is displayed on the web page.");
 	}
 	
-	@Test
-	public void logoutFromBox(){
-		 WebElement optionsDropdown = driver.findElement(By.cssSelector("li[id=\"current_user_tab\"]"));
-         optionsDropdown.click();
-         
-         WebElement logoutLink = driver.findElement(By.cssSelector("a[href=\"/logout\"]"));
-         logoutLink.click();
+	@Test(dependsOnMethods={"verifyTitle2"})
+	public void logoutFromBox() throws InterruptedException{
+		WebElement optionsDropdown = new WebDriverWait(driver, 70).until(ExpectedConditions
+				.visibilityOfElementLocated(By.xpath(".//div[@id='mod-header-amsterdam-1']/div[2]/div[2]/button")));
+
+		optionsDropdown.click();
+		Thread.sleep(2000);
+		WebElement logoutLink = new WebDriverWait(driver, 70).until(ExpectedConditions.visibilityOfElementLocated(By.cssSelector("a[href=\"/logout\"]")));
+		logoutLink.click();
 
 //		WebElement logoutLink = driver.findElement(By.linkText("Log Out"));
 //		logoutLink.click();
