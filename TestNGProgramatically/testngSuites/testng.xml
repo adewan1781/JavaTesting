@@ -3,7 +3,7 @@
 
 <suite name="Suite1">
      <parameter name="expectedTitle1" value="Box | Simple Online Collaboration" />
-	<parameter name="expectedTitle2" value="All files and folders - Box" />
+	<parameter name="expectedTitle2" value="All Files | Powered By Box" />
   
   
    <test name="BoxLoginLogout" preserve-order="true">
